@@ -1,0 +1,333 @@
+
+/* roboto-regular - latin_cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/roboto-v27-latin_cyrillic-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/roboto-v27-latin_cyrillic-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/roboto-v27-latin_cyrillic-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/roboto-v27-latin_cyrillic-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/roboto-v27-latin_cyrillic-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/roboto-v27-latin_cyrillic-regular.svg#Roboto') format('svg'); /* Legacy iOS */
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.wrap {
+  max-width: 1170px;
+  position: relative;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  flex-flow: column;
+}
+
+.finding-tutors {
+  padding-top: 41px;
+}
+
+.finding-form {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 50px;
+}
+
+.select-form {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 0 10px 0 12px;
+  height: 45px;
+  border: 2px solid #009990;
+  box-sizing: border-box;
+  border-radius: 5px;
+  color: #009990;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  resize: none;
+  width: 277px;
+  max-width: 277px;
+  margin-right: 18px;
+  appearance: none;
+  background: url('../img/arrow.png') no-repeat right;
+  background-position-x: calc(100% - 13px);
+}
+
+.finding-form__btn-submit {
+  background: #009990;
+  color: #fff;
+  padding: 10px 20px;
+  border-color: transparent;
+}
+
+.tutors__btn-more {
+  border: 2px solid #009990;
+  color: #009990;
+  padding: 14px 0;
+  width: 336px;
+  background-color: transparent;
+}
+
+.buttons {
+  cursor: pointer;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  border-radius: 5px;
+  text-align: center;
+  outline: none;
+}
+
+.tutors {
+  padding-top: 28px;
+  padding-bottom: 41px;
+}
+
+.tutors__list {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 40px;
+}
+
+.tutors-loading {
+  margin: 41px auto;
+  color: #009990;
+  text-align: center;
+  padding-top: 50px;
+  animation: animate-loading 3s linear infinite;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+@keyframes animate-loading {
+  0% {
+    border-right: 2px solid #009990;
+  }
+  30% {
+    border-top: 2px solid #009990;
+    border-right: 2px solid transparent;
+  }
+  60% {
+    border-left: 2px solid #009990;
+    border-top: 2px solid transparent;
+  }
+  100% {
+    border-bottom: 2px solid #009990;
+    border-left: 2px solid transparent;
+  }
+}
+
+.tutors__item {
+  display: flex;
+  list-style-type: none;
+  width: 820px;
+  height: 80px;
+  max-width: 820px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 16px;
+  margin-bottom: 18px;
+  word-break: break-all;
+}
+
+.tutors__discript {
+  display: flex;
+  flex-flow: column;
+  padding-left: 15px;
+}
+
+.tutors__img {
+  border-radius: 50%;
+  width: 78px;
+  height: 78px;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.tutors__name {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.tutors__subj {
+  padding-top: 14px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+}
+
+.tutors__price {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  color: #009990;
+}
+
+.tutors__btns {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 1200px) {
+  .finding-form {
+    padding-left: 25px;
+    justify-content: center;
+    flex-flow: wrap;
+  }
+  .select-form {
+    display: flex;
+    max-width: 225px;
+  }
+  .select-form:nth-child(1) {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .finding-form__btn-submit {
+    flex-basis: 30%;
+    margin-top: 20px;
+  }
+  .tutors__item {
+    display: flex;
+    max-width: 600px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .finding-form {
+    padding-left: 0;
+    place-items: center;
+    align-items: center;
+    align-content: center;
+  }
+  .select-form {
+    display: flex;
+    max-width: 250px;
+  }
+  .select-form:nth-child(1) {
+    max-width: 250px;
+  }
+  .finding-form__btn-submit {
+    flex-basis: 70%;
+  }
+  .select-form:nth-child(3){
+    margin-top: 20px;
+  }
+  .tutors__item {
+    display: flex;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 576px) {
+  .finding-tutors {
+    padding-top: 23px;
+  }
+  .finding-form {
+    flex-flow: column;
+  }
+  .select-form {
+    width: 333px;
+    max-width: inherit;
+    margin-right: 0;
+    margin-top: 8px;
+    font-size: 14px;
+  }
+  .select-form:nth-child(1){
+    width: 333px;
+    max-width: inherit;
+    margin:0;
+  }
+  .select-form:nth-child(2),
+  .select-form:nth-child(3){
+    width: 333px;
+    max-width: inherit;
+    margin-top: 8px;
+  }
+  .finding-form__btn-submit {
+    flex-basis: 100%;
+    font-size: 14px;
+    width: 50%;
+  }
+  .tutors {
+    padding-top: 2px;
+  }
+
+  .tutors__wrap {
+    padding: 0;
+  }
+  
+  .tutors__list {
+    justify-content: center;
+    align-items: center;
+    margin-right: 0;
+    padding: 0;
+  }
+
+  .tutors__item {
+    display: flex;
+    width: 333px;
+    max-width: 333px;
+    padding: 16px 0 0 0;
+    height: 74px;
+    margin-bottom: 8px;
+  }
+  .tutors__img {
+    width: 57px;
+    height: 57px;
+  }
+  .tutors__img-content {
+    padding-left: 16px;
+  }
+  .tutors__name {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .tutors__subj {
+    font-size: 16px;
+    line-height: 19px;
+    padding-top: 7px;
+  }
+  .tutors__price {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+
+@media (max-width: 375px) {
+  .finding-form__btn-submit {
+    flex-basis: 100%;
+    width: 96.5%;
+    font-size: 14px;
+    padding: 11px 20px;
+    margin-top: 8px;
+  }
+}
